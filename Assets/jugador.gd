@@ -5,6 +5,7 @@ extends CharacterBody3D
 ## Cámara que define qué es "adelante". Si se deja vacía se usa la activa.
 @export var camara: Camera3D
 
+@export var fuerza_salto: float = 8.0
 
 func _ready() -> void:
 	if camara == null:
@@ -26,8 +27,9 @@ func _physics_process(delta: float) -> void:
 	velocity.x = direction.x * speed
 	velocity.z = direction.z * speed
 
-	# TODO (Tarea 2): falta la función de salto completa. Todavía no hay
-	# gravedad ni velocity.y en absoluto — por eso caminar funciona bien
-	# aunque no exista ningún piso en la escena.
+	if not is_on_floor():
+		velocity += get_gravity() * delta
+	elif  Input.is_action_just_pressed("saltar"):
+		velocity.y = fuerza_salto
 
 	move_and_slide()
