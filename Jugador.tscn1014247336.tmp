@@ -18,9 +18,7 @@ height = 1.75
 
 [node name="Cuerpo" type="CharacterBody3D" parent="." unique_id=1074148502 node_paths=PackedStringArray("camara") groups=["player"]]
 script = ExtResource("1_jug")
-speed = null
 camara = NodePath("Camera3D")
-fuerza_salto = null
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Cuerpo" unique_id=63192042]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.875, 0)
