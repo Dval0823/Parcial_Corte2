@@ -70,7 +70,11 @@ func _decidir_estado(distancia: float, lo_veo: bool) -> Estado:
 ## TAREA 6 (10%): efectos visuales de daño
 func recibir_dano(cantidad: float) -> float:
 	vida = max(vida - cantidad, 0.0)
+	
+	Efectos.flash(mesh, "material_override:albedo_color", Color.WHITE, 0.1, self)
+	
 	Efectos.particulas(particulas_impacto)
+	
 	return vida
 
 
