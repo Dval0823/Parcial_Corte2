@@ -39,4 +39,4 @@ script = ExtResource("2_cam")
 objetivo = NodePath("..")
 
 [node name="Camera3D" type="Camera3D" parent="Cuerpo" unique_id=2615862]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05012107, 2.06423, 3.170659)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05372858, 2.498524, 3.827807)
